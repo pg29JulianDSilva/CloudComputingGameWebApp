@@ -28,17 +28,17 @@ export default function App() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        const unsusbscribe = onAuthStateChanged(auth, async (firebaseUser) => { //connects with authState
+        const unsusbscribe = onAuthStateChanged(auth, async (firebaseUser) => { 
             if (firebaseUser) {
-                await createUserProfileIfNedded(firebaseUser); //if the player can login
+                await createUserProfileIfNedded(firebaseUser);
                 setUser(firebaseUser);
             } else {
-                setUser(null); //No loggin
+                setUser(null); 
             }
             setLoading(false);
         });
 
-        return () => unsusbscribe(); // returned when it is onMounted
+        return () => unsusbscribe();
     }, []);
 
     if (loading) {
@@ -52,7 +52,6 @@ export default function App() {
     return (
         <div className="app">
             {user ? <GamePortal user={user} /> : <LoginForm /> }
-            {/*<LoginForm />  This is basically all the login componenet. Which in Firebase it should allow at least 300.000 dalily active users*/ }
         </div>
     )
 

@@ -1,7 +1,7 @@
 ﻿import { useState, useEffect, useRef, useCallback } from "react";
 import { signOut } from "firebase/auth";
 import { auth, db } from "../firebase";
-import { doc, onSnapshot } from 'firebase/firestore';
+import { doc, onSnapshot, collection, } from 'firebase/firestore';
 
 
 import Leaderboard from "./LeaderBoard";
@@ -18,29 +18,36 @@ export default function GamePortal({user}) {
 
     const [userData, setUserData] = useState(null);
     const [gameLoaded, setGameLoaded] = useState(false);
-    const [activeTab, setActiveTab] = useState("admin");
+    const [activeTab, setActiveTab] = useState("game");
     const [userAdmin, setUserAdmin] = useState(false);
-
-    const validadedAdmin = async () => {
-        const token = await user.getIdTokenResult();
-
-        if (token === "admin") setUserAdmin(true);
-        else setUserAdmin(false);
-    }
 
     useEffect(() => {
         const userRef = doc(db, "users", user.uid);
+        const whitelistRef = doc(db, "whitelist/Admin_spencer");
         
-        const unsubscribe = onSnapshot(userRef, (snapshot) => {
+        const unsubscribeUser = onSnapshot(userRef, (snapshot) => {
             if (snapshot.exists()) {
                 setUserData(snapshot.data())
-
-                //validadedAdmin;
             }
         });
 
-        return () => unsubscribe();
-    }, [user.uid]);
+        const unsubscribeAdmin = onSnapshot(whitelistRef, (snapshot) => {
+            if (snapshot.exists()) {
+                const adminData = snapshot.data();
+
+                const isAdmin = adminData.email == user.email;
+
+                setUserAdmin(isAdmin);
+            }
+        });
+
+
+
+        return () => {
+            unsubscribeUser()
+            unsubscribeAdmin();
+        };
+    }, [user.uid, user.email]);
 
     const sendAuthToGame = useCallback(async () => {
         if (!iframeRef.current?.contentWindow || !user || authAckowledged.current) return;
@@ -50,7 +57,7 @@ export default function GamePortal({user}) {
             const payload = {
                 type: "firebase-auth",
                 uid: user.uid,
-                displayName: user.dissplayName || user.email || "Player",
+                displayName: user.displayName || user.email || "Player",
                 idToken,
                 projectId: FIREBASE_PROJECT_ID,
             };
@@ -93,7 +100,7 @@ export default function GamePortal({user}) {
                     console.warn("Game never acknowledge auth after 30s. Did you put the FirebaseManager in the scene?");
                 }
             }
-        })
+        }, /*30000*/) //Disabled for the cloud computing part only
     }, [sendAuthToGame])
 
     const handleSignOut = async () => {
@@ -107,9 +114,9 @@ export default function GamePortal({user}) {
     return (
         <div className="portal-container">
             <div className="tab-bar">
-                <button className={activeTab === "game" ? "tab active" : "tab"} onClick={() => { setActiveTab("game") }} /*disabled={gameLoaded}*/>Game</button>
+                <button className={activeTab === "game" ? "tab active" : "tab"} onClick={() => { setActiveTab("game") }} /*disabled={gameLoaded}*/>Game</button> {/*TODO: add the gameloaded when the game works*/}
                 <button className={activeTab === "leaderboard" ? "tab active" : "tab"} onClick={() => { setActiveTab("leaderboard") }} /*disabled={gameLoaded}*/>Leaderboard</button>
-                <button className={activeTab === "admin" ? "tab active" : "tab"} onClick={() => { setActiveTab("admin") }} /*disabled={gameLoaded || userAdmin}*/>⚙️</button>
+                <button className={activeTab === "admin" ? "tab active" : "tab"} onClick={() => { setActiveTab("admin") }} disabled={!userAdmin}>⚙️</button>
             </div>
             {activeTab === "game" ?
                 <div className="game-area">

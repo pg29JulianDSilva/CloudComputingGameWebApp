@@ -12,12 +12,11 @@ import {
     deleteDoc,
     query,
     where,
-    serverTimestamp,
     Timestamp,
 } from 'firebase/firestore';
 import "dotenv/config";
 
-const __dirname = dirname(fileURLToPath((import.meta.url))); //This one gives the local endpoint from the server
+const __dirname = dirname(fileURLToPath((import.meta.url))); 
 const envPath = resolve(__dirname, "..", ".env");
 const envVars = {};
 
@@ -33,7 +32,6 @@ try {
         envVars[key] = value;
     }
 
-    //console.log(envVars);
 } catch {
     console.log("Error");
 }
@@ -108,7 +106,6 @@ async function pushScores() {
         const highScore = Math.max(...scores.map((s) => s.score));
         const memberSince = randomPastTimestap(90);
 
-        //This one will lets us get and even override the data with only the id itself
         await setDoc(doc(db, "users", player.id), {
             email: player.email,
             displayName: player.name,
@@ -124,7 +121,7 @@ async function pushScores() {
 
     console.log("Data pushed ;)");
 
-} //This one will create a bunch a lot inside data to load and it will push it if called with other data. 
+} 
 
 async function clearMockData() {
     for (const player of MOCK_PLAYERS) {
