@@ -1,7 +1,7 @@
 ﻿import { useState, useEffect, useRef, useCallback } from "react";
 import { signOut } from "firebase/auth";
 import { auth, db } from "../firebase";
-import { doc, onSnapshot, collection, } from 'firebase/firestore';
+import { doc, onSnapshot, } from 'firebase/firestore';
 
 
 import Leaderboard from "./LeaderBoard";

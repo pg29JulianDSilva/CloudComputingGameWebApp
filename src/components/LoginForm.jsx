@@ -8,7 +8,7 @@ import {
 
 import { auth } from "../firebase";
 
-const googleProvider = new GoogleAuthProvider(); //This one is the source that allow us to connect for testing for now
+const googleProvider = new GoogleAuthProvider();
 
 export default function LoginForm() {
     const [email, setEmail] = useState("");
