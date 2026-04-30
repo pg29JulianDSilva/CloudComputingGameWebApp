@@ -4,7 +4,9 @@
     "\\scripts",
     "\\src",
     "\\src\\assets",
-    "\\src\\components"
+    "\\src\\components",
+    "\\src\\Data"
   ],
+  "SelectedNode": "\\src\\index.css",
   "PreviewInSolutionExplorer": false
 }

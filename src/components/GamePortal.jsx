@@ -6,9 +6,18 @@ import { doc, onSnapshot, } from 'firebase/firestore';
 
 import Leaderboard from "./LeaderBoard";
 import UserInfo from "./UserInfo";
+import AdminTools from "./AdminTools";
 
 const GAME_URL = import.meta.env.VITE_GAME_URL || null;
 const FIREBASE_PROJECT_ID = import.meta.env.VITE_FIREBASE_PROJECT_ID || "";
+
+window.addEventListener('beforeunload', async (event) => {
+    try {
+        await signOut(auth);
+    } catch (err) {
+        console.log("Sign out error", err);
+    }
+})
 
 export default function GamePortal({user}) {
 
@@ -110,6 +119,7 @@ export default function GamePortal({user}) {
             console.log("Sign out error", err);
         }
     }
+    
 
     return (
         <div className="portal-container">
@@ -120,7 +130,6 @@ export default function GamePortal({user}) {
             </div>
             {activeTab === "game" ?
                 <div className="game-area">
-                <UserInfo user={user} />
                     <iframe
                         ref={iframeRef}
                         src={GAME_URL}
@@ -134,6 +143,11 @@ export default function GamePortal({user}) {
                 <div className="portal-content">
                     <Leaderboard />
                 </div> : <></>}
+            {activeTab == "admin" ? 
+                <div className="portal-content">
+                    <AdminTools />
+                </div> : <></>}
+            <UserInfo user={user} />
             <button onClick={handleSignOut} className="btn-signout">sign out</button>
         </div>
     )

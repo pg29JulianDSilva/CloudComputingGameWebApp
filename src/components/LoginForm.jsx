@@ -6,7 +6,24 @@ import {
     GoogleAuthProvider
 } from "firebase/auth";
 
-import { auth } from "../firebase";
+import {
+    getFirestore,
+    collection,
+    doc,
+    getDoc,
+    setDoc,
+    addDoc,
+    getDocs,
+    deleteDoc,
+    query,
+    where,
+    Timestamp,
+    serverTimestamp,
+    onSnapshot,
+    documentId
+} from 'firebase/firestore';
+
+import { auth, db } from "../firebase";
 
 const googleProvider = new GoogleAuthProvider();
 
@@ -32,6 +49,35 @@ export default function LoginForm() {
         return map[firebaseError.code] || firebaseError.message;
     }
 
+    const handleUserInDataBase = async (firebaseUser) => {
+        try {
+            console.log(firebaseUser.user);
+            const user = {
+                id: `m_${firebaseUser.user.email.split("@")[0].replace(/[^a-zA-Z0-9]/g, "_")}`,
+                name: firebaseUser.user.email.split("@")[0],
+                email: firebaseUser.user.email
+            };
+
+
+            const docSnap = await getDoc(doc(db, "users", user.id));
+
+            if (!docSnap.exists()) {
+                await setDoc(doc(db, "users", user.id), {
+                    email: user.email,
+                    displayName: user.name,
+                    photoURL: firebaseUser.photoURL || null,
+                    createdAt: serverTimestamp(),
+                    highScore: 0,
+                    gamePlayer: 0,
+                    isMock: true,
+                });
+            }
+        } catch (err) {
+            setError(getReadableError(err));
+            console.log(err);
+        }
+    };
+
     const handleEmailAuth = async (e) => {
         e.preventDefault();
 
@@ -40,9 +86,12 @@ export default function LoginForm() {
 
         try {
             if (isRegistering) {
-                await createUserWithEmailAndPassword(auth, email, password);
+                const credential = await createUserWithEmailAndPassword(auth, email, password);
+                await handleUserInDataBase(credential);
             } else {
-                await signInWithEmailAndPassword(auth, email, password);
+                const credential = await signInWithEmailAndPassword(auth, email, password);
+                await credential.user.reload();
+                await handleUserInDataBase(credential);
             }
         } catch (err) {
             setError(getReadableError(err));
@@ -55,13 +104,15 @@ export default function LoginForm() {
         setError("");
         setLoading(true);
         try {
-            await signInWithPopup(auth, googleProvider);
+            const credential = await signInWithPopup(auth, googleProvider);
+            await handleUserInDataBase(credential.user);
         } catch (err) {
             setError(getReadableError(err));
         } finally {
             setLoading(false);
         }
     };
+
 
     return (
         <div className="login-container">
@@ -81,12 +132,12 @@ export default function LoginForm() {
                     {/*This is the way to call the only error. Also remember that On this case the values here will connect with the auth when sended*/}
 
                     <button type="submit" className="btn-primary" disabled={loading}>
-                        { loading ? "PLesae wait" : (isRegistering) ?  "Create account" : "Sign in" }
+                        { loading ? "Please wait" : (isRegistering) ?  "Create account" : "Sign in" }
                     </button>
                 </form>
 
                     <button onClick={() => { setIsRegistering(!isRegistering); setError(""); }} className="btn-link" disabled={loading}>
-                        { isRegistering ? "Already have an account? Sign in" : "Dont have an account? Register" }
+                        { isRegistering ? "Already have an account? Sign in" : "Don't have an account? Register" }
                     </button>
 
                     <div className="divider">

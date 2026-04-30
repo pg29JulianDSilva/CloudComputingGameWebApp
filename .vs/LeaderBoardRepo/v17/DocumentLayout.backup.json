@@ -1,0 +1,169 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\silva\\Desktop\\Carpeta Temporal Trabajos VFS sin Terminar\\LeaderBoardRepo\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\silva\\Desktop\\Carpeta Temporal Trabajos VFS sin Terminar\\LeaderBoardRepo\\scripts\\ingestScores.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:scripts\\ingestScores.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\silva\\Desktop\\Carpeta Temporal Trabajos VFS sin Terminar\\LeaderBoardRepo\\src\\components\\LoginForm.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\components\\LoginForm.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\silva\\Desktop\\Carpeta Temporal Trabajos VFS sin Terminar\\LeaderBoardRepo\\src\\components\\AdminTools.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\components\\AdminTools.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\silva\\Desktop\\Carpeta Temporal Trabajos VFS sin Terminar\\LeaderBoardRepo\\src\\Data\\plot.py||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\Data\\plot.py||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\silva\\Desktop\\Carpeta Temporal Trabajos VFS sin Terminar\\LeaderBoardRepo\\src\\components\\LeaderBoard.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\components\\LeaderBoard.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\silva\\Desktop\\Carpeta Temporal Trabajos VFS sin Terminar\\LeaderBoardRepo\\src\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\silva\\Desktop\\Carpeta Temporal Trabajos VFS sin Terminar\\LeaderBoardRepo\\src\\App.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\App.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\silva\\Desktop\\Carpeta Temporal Trabajos VFS sin Terminar\\LeaderBoardRepo\\src\\components\\GamePortal.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\components\\GamePortal.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\silva\\Desktop\\Carpeta Temporal Trabajos VFS sin Terminar\\LeaderBoardRepo\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LoginForm.jsx",
+              "DocumentMoniker": "C:\\Users\\silva\\Desktop\\Carpeta Temporal Trabajos VFS sin Terminar\\LeaderBoardRepo\\src\\components\\LoginForm.jsx",
+              "RelativeDocumentMoniker": "src\\components\\LoginForm.jsx",
+              "ToolTip": "C:\\Users\\silva\\Desktop\\Carpeta Temporal Trabajos VFS sin Terminar\\LeaderBoardRepo\\src\\components\\LoginForm.jsx",
+              "RelativeToolTip": "src\\components\\LoginForm.jsx",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAQwBMAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-04-29T06:13:50.148Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ingestScores.js",
+              "DocumentMoniker": "C:\\Users\\silva\\Desktop\\Carpeta Temporal Trabajos VFS sin Terminar\\LeaderBoardRepo\\scripts\\ingestScores.js",
+              "RelativeDocumentMoniker": "scripts\\ingestScores.js",
+              "ToolTip": "C:\\Users\\silva\\Desktop\\Carpeta Temporal Trabajos VFS sin Terminar\\LeaderBoardRepo\\scripts\\ingestScores.js",
+              "RelativeToolTip": "scripts\\ingestScores.js",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-04-29T06:06:46.272Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "index.css",
+              "DocumentMoniker": "C:\\Users\\silva\\Desktop\\Carpeta Temporal Trabajos VFS sin Terminar\\LeaderBoardRepo\\src\\index.css",
+              "RelativeDocumentMoniker": "src\\index.css",
+              "ToolTip": "C:\\Users\\silva\\Desktop\\Carpeta Temporal Trabajos VFS sin Terminar\\LeaderBoardRepo\\src\\index.css",
+              "RelativeToolTip": "src\\index.css",
+              "ViewState": "AgIAAHMBAAAAAAAAAAAAwHoBAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-04-29T04:26:11.077Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\silva\\Desktop\\Carpeta Temporal Trabajos VFS sin Terminar\\LeaderBoardRepo\\index.html",
+              "RelativeDocumentMoniker": "index.html",
+              "ToolTip": "C:\\Users\\silva\\Desktop\\Carpeta Temporal Trabajos VFS sin Terminar\\LeaderBoardRepo\\index.html",
+              "RelativeToolTip": "index.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-04-29T04:20:08.643Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "plot.py",
+              "DocumentMoniker": "C:\\Users\\silva\\Desktop\\Carpeta Temporal Trabajos VFS sin Terminar\\LeaderBoardRepo\\src\\Data\\plot.py",
+              "RelativeDocumentMoniker": "src\\Data\\plot.py",
+              "ToolTip": "C:\\Users\\silva\\Desktop\\Carpeta Temporal Trabajos VFS sin Terminar\\LeaderBoardRepo\\src\\Data\\plot.py",
+              "RelativeToolTip": "src\\Data\\plot.py",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABQAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2026-04-29T04:14:14.366Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LeaderBoard.jsx",
+              "DocumentMoniker": "C:\\Users\\silva\\Desktop\\Carpeta Temporal Trabajos VFS sin Terminar\\LeaderBoardRepo\\src\\components\\LeaderBoard.jsx",
+              "RelativeDocumentMoniker": "src\\components\\LeaderBoard.jsx",
+              "ToolTip": "C:\\Users\\silva\\Desktop\\Carpeta Temporal Trabajos VFS sin Terminar\\LeaderBoardRepo\\src\\components\\LeaderBoard.jsx",
+              "RelativeToolTip": "src\\components\\LeaderBoard.jsx",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAwBYAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-04-29T04:11:24.062Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "GamePortal.jsx",
+              "DocumentMoniker": "C:\\Users\\silva\\Desktop\\Carpeta Temporal Trabajos VFS sin Terminar\\LeaderBoardRepo\\src\\components\\GamePortal.jsx",
+              "RelativeDocumentMoniker": "src\\components\\GamePortal.jsx",
+              "ToolTip": "C:\\Users\\silva\\Desktop\\Carpeta Temporal Trabajos VFS sin Terminar\\LeaderBoardRepo\\src\\components\\GamePortal.jsx",
+              "RelativeToolTip": "src\\components\\GamePortal.jsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIwAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-04-29T04:07:39.074Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "App.jsx",
+              "DocumentMoniker": "C:\\Users\\silva\\Desktop\\Carpeta Temporal Trabajos VFS sin Terminar\\LeaderBoardRepo\\src\\App.jsx",
+              "RelativeDocumentMoniker": "src\\App.jsx",
+              "ToolTip": "C:\\Users\\silva\\Desktop\\Carpeta Temporal Trabajos VFS sin Terminar\\LeaderBoardRepo\\src\\App.jsx",
+              "RelativeToolTip": "src\\App.jsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-04-29T04:07:25.702Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AdminTools.jsx",
+              "DocumentMoniker": "C:\\Users\\silva\\Desktop\\Carpeta Temporal Trabajos VFS sin Terminar\\LeaderBoardRepo\\src\\components\\AdminTools.jsx",
+              "RelativeDocumentMoniker": "src\\components\\AdminTools.jsx",
+              "ToolTip": "C:\\Users\\silva\\Desktop\\Carpeta Temporal Trabajos VFS sin Terminar\\LeaderBoardRepo\\src\\components\\AdminTools.jsx",
+              "RelativeToolTip": "src\\components\\AdminTools.jsx",
+              "ViewState": "AgIAADEAAAAAAAAAAAAQwDMAAABzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-04-29T04:02:14.807Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
