@@ -6,7 +6,7 @@ import PLOT_PY from './../Data/plot.py?raw';
 
 
 let pyodideReady = null;
-let DATA_LIMIT = 10;
+let DATA_LIMIT = 30;
 
 function getPyodide() {
     if (!pyodideReady) {
@@ -49,7 +49,7 @@ export default function AdminTools({ user }) {
 
                 let actualData = [];
 
-                leaders.map(p => actualData.push({ playerName: p.displayName, score: p.highScore, duration: 10 }));
+                leaders.map(p => actualData.push({ playerName: p.displayName, score: p.highScore, games: p.gamesPlayed }));
 
                 window.__pyodideData = JSON.stringify(actualData);
 

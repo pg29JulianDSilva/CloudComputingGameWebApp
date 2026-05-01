@@ -9,12 +9,12 @@ import GamePortal from "./components/GamePortal";
     const userRef = doc(db, "users", firebaseUser.uid);
     const snapshot = await getDoc(userRef);
 
-    if (!snapshot.exists) {
+    if (!snapshot.exists() && userRef != null) {
         await setDoc(userRef, {
             email: firebaseUser.email,
             displayName: firebaseUser.displayName || "Player",
-            photoURL: serverTimestamp(),
-            highscore: 0,
+            CreatedAt: serverTimestamp(),
+            highScore: 0,
             gamePlayed: 0
         })
 

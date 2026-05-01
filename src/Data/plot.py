@@ -8,20 +8,20 @@ from js import document, window
 data = json.loads(window.__pyodideData)
 
 names = [d['playerName'] for d in data]
-scores = [d['highScoreore'] for d in data]
-durations = [d['CreatedAt'] for d in data]
+scores = [d['score'] for d in data]
+games = [d['games'] for d in data]
 
-fig, ax = plt.subplots(1, 2, figsize=(12, 4))
+fig, ax = plt.subplots(1, 2, figsize=(12, 6))
 ax[0].bar(names, scores, color='skyblue', edgecolor='blue')
 ax[0].set_title('Player Scores')
 ax[0].set_ylabel('Scores')
+ax[0].tick_params(axis='x', rotation=90)
 
-ax[1].hist(durations, bins=50)
-ax[1].set_title('Duration of players on screen')
-ax[1].set_xlabel('Time on game (Minutes)')
-ax[1].set_ylabel('# of players')
+ax[1].bar(names, games, color='skyblue', edgecolor='blue')
+ax[1].set_title('Player games')
+ax[1].set_ylabel('Number of games')
+ax[1].tick_params(axis='x', rotation=90)
 plt.tight_layout()
-
 
 buf = io.BytesIO()
 fig.savefig(buf, format='png')

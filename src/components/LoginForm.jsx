@@ -51,25 +51,22 @@ export default function LoginForm() {
 
     const handleUserInDataBase = async (firebaseUser) => {
         try {
-            console.log(firebaseUser.user);
-            const user = {
-                id: `m_${firebaseUser.user.email.split("@")[0].replace(/[^a-zA-Z0-9]/g, "_")}`,
-                name: firebaseUser.user.email.split("@")[0],
-                email: firebaseUser.user.email
-            };
+            const uid = firebaseUser.uid;
+            const displayName = firebaseUser.displayName
+                || firebaseUser.email.split("@")[0];
 
-
-            const docSnap = await getDoc(doc(db, "users", user.id));
+            const docRef = doc(db, "users", uid);
+            const docSnap = await getDoc(docRef);
 
             if (!docSnap.exists()) {
-                await setDoc(doc(db, "users", user.id), {
-                    email: user.email,
-                    displayName: user.name,
+                await setDoc(docRef, {
+                    email: firebaseUser.email,
+                    displayName: displayName,
                     photoURL: firebaseUser.photoURL || null,
                     createdAt: serverTimestamp(),
                     highScore: 0,
-                    gamePlayer: 0,
-                    isMock: true,
+                    gamesPlayed: 0,  
+                    isMock: false,
                 });
             }
         } catch (err) {
@@ -87,11 +84,11 @@ export default function LoginForm() {
         try {
             if (isRegistering) {
                 const credential = await createUserWithEmailAndPassword(auth, email, password);
-                await handleUserInDataBase(credential);
+                await handleUserInDataBase(credential.user);
             } else {
                 const credential = await signInWithEmailAndPassword(auth, email, password);
                 await credential.user.reload();
-                await handleUserInDataBase(credential);
+                await handleUserInDataBase(credential.user);
             }
         } catch (err) {
             setError(getReadableError(err));

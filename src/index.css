@@ -826,6 +826,15 @@ code {
     margin-right: 2em;
 }
 
+    .ProfileUp h3 {
+        padding: 0.5em;
+    }
+
+
+#pyodide-target{
+    align-content:center;
+}
+
 @media (max-width: 600px) {
     .portal-header {
         padding: 0.6rem 1rem;

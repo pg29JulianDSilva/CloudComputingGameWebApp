@@ -109,7 +109,7 @@ export default function GamePortal({user}) {
                     console.warn("Game never acknowledge auth after 30s. Did you put the FirebaseManager in the scene?");
                 }
             }
-        }, /*30000*/) //Disabled for the cloud computing part only
+        }, 30000) //Disabled for the cloud computing part only
     }, [sendAuthToGame])
 
     const handleSignOut = async () => {
@@ -147,7 +147,7 @@ export default function GamePortal({user}) {
                 <div className="portal-content">
                     <AdminTools />
                 </div> : <></>}
-            <UserInfo user={user} />
+            <UserInfo user={user} userData={userData} />
             <button onClick={handleSignOut} className="btn-signout">sign out</button>
         </div>
     )
